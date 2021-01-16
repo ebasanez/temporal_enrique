@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html th:replace="~{layout :: layout( ~{::section})}">
+<body>
+<section>
+  <div class="row">
+    <div class="col-sm-4 col-xs-6">
+      <div class="small-box bg-aqua">
+        <div class="inner">
+          <h3 th:text="${map.number_of_users}"></h3>
+          <p>Usuarios</p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-fw fa-users"></i>
+        </div>
+        <a th:href="@{/user/}" class="small-box-footer">
+          Ver más
+        </a>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-6">
+      <div class="small-box bg-green">
+        <div class="inner">
+          <h3 th:text="${map.number_of_workplaces}"></h3>
+          <p>Centros</p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-fw fa-server"></i>
+        </div>
+        <a th:href="@{/workplace/}" class="small-box-footer">
+          Ver más
+        </a>
+      </div>
+    </div>
+    <div class="col-sm-4 col-xs-6">
+      <div class="small-box bg-yellow">
+        <div class="inner">
+          <h3 th:text="${map.number_of_jobs}"></h3>
+          <p>Trabajos</p>
+        </div>
+        <div class="icon">
+          <i class="fa fa-fw fa-cogs"></i>
+        </div>
+        <a th:href="@{/job/}" class="small-box-footer">
+          Ver más
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
